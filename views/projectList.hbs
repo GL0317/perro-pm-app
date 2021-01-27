@@ -1,0 +1,44 @@
+{{!< layouts/page}}
+{{!-- <h1>This is the Project List page</h1>
+<p>Words: {{ msg }}</p>
+<br> --}}
+
+<!-- Begin Main View Container -->
+<div class="mainView container pt-2">
+    <div id="projectListView">
+        <table id="projectListTable" class="table table-striped border border-dark">
+            <thead class="thead-dark">
+                <tr scope="row">
+                    <th scope="col">
+                        Projects
+                    </th>
+                    <th scope="col">
+                        Completed Tasks
+                    </th>
+                    <th scope="col">
+                        Remaining Tasks
+                    </th>
+                    <th scope="col">
+                        Total Tasks
+                    </th>
+                    <th scope="col">
+                        % Complete
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each projectTable}}
+                <tr class="table" scope="row">
+                    <td class="border-right-dark"><a class="task-links" href="/projectSummary/{{name}}">{{name}}</a></td>
+                    <td>{{completedTasks}}</td>
+                    <td>{{remainingTasks}}</td>
+                    <td>{{totalTasks}}</td>
+                    <td>{{complete}}%</td>
+                </tr>
+                {{/each}}
+                </tr>	
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- End Main View Container -->
