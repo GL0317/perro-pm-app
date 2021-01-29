@@ -24,9 +24,9 @@
                 </tr>
             </thead>
             <tbody>
-                {{#each projectTable}}
+                {{#each projects}}
                 <tr class="table" scope="row">
-                    <td class="border-right-dark"><a class="task-links" href="/projectSummary/{{name}}">{{name}}</a></td>
+                    <td class="border-right-dark"><a class="task-links" href="/projectSummary/{{id}}">{{title}}</a></td>
                     <td>{{completedTasks}}</td>
                     <td>{{remainingTasks}}</td>
                     <td>{{totalTasks}}</td>

@@ -1,4 +1,93 @@
 {{!< main}}
 
-<h1>Welcome to Perro</h1>
-<p>Hello {{ name }}</p>
+{{!-- <h1>Welcome to Perro</h1> --}}
+{{!-- <p>Hello {{ name }}</p> --}}
+<style>
+    #signIn {
+        font-size: 200%;
+        display: flex;
+        justify-content: center;
+    }
+    .login-container{
+        min-height: 50%;
+        margin-bottom: 0px;
+    }
+    .internal-top-row, .internal-email-row {
+        min-height: 25%
+    }
+    .empty-row{
+        height: 60px;
+    }
+</style>
+<div class="container mainView">
+        <div class="row empty-row mb-4">
+
+        </div>
+    		<!-- Begin login-container row -->
+    		<div class="row login-container mt-4">
+    			<!-- Begin empty left col-->
+	    		<div class="col empty-col">
+	    		</div>
+				<!-- End empty left col-->
+
+    			<!-- Begin login-box container-->
+				<div class="login-box container col-4 border barder-dark">
+
+						<!-- Begin internal login top row -->
+						<div class="row internal-top-row">
+						</div>
+						<!-- End internal login top row -->
+
+						<div class="row internal-google-row mb-2">
+							<div class="col-1">
+							</div>
+							<div class="col">
+								<h1 class="text-center"><a href="/projects">Perro PM</a></h1>
+							</div>
+						</div>
+						<div class="row mt-4 d-flex">
+								<!--div class="g-signin2" style="width:275" data-onsuccess="onSignIn" data-theme="light"></div-->
+								<!--div id="firebaseui-auth-container"></div>
+								<div id="loader"></div-->
+							<div class="col-4">	
+							</div>
+							<div class="col-6 justify-content-center">
+        						{{!-- <a href="/auth/google" style="width:275" data-theme="light"> Sign In with Google</a> --}}
+                                <a href="/projects">
+                                    <input type="submit" value="Sign In" style="width:150;" id="SignIn">
+                                </a>
+                                    {{!-- <a href="/projects" style="width:150" data-theme="light" id="signIn"> Sign In</a> --}}
+							</div>
+							<div class="col">	
+							</div>
+						</div>
+						<div class="row internal-email-row mb-2 pt-4">
+							<div class="col-1">
+							</div>
+							<div class="col">
+							</div>
+						</div>
+						<!-- End internal email-row -->
+						<!-- Begin empty row -->
+						<div class="row mb-4 empty-row">
+						</div>
+						<!-- End empty row -->
+						<!-- Begin terms-row -->
+						<div class="row terms-row">
+							<div class="col-1 mr-0 mt-4 empty-col">
+							</div>
+							<div class="col ml-0 mr-0 mt-4">
+								<p style="font-size:10"><!--This site is protected by the Google <a href="#">privacy policy</a> and</br><a href="#"> Terms of Service apply</a>--></p>
+							</div>
+						</div>
+						<!-- End terms-row -->
+				</div>
+				<!-- End login-box container -->
+				
+				<!-- Begin empty right col-->
+				<div class="col empty-col">
+				</div>
+				<!-- End empty right col-->
+    		</div>		
+			<!-- End login-container row-->
+</div>
