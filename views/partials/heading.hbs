@@ -1,0 +1,44 @@
+<!-- Begin Header Container-->
+<div class="container">
+	<div class="row pt-2 pr-3">
+		<div class="col-10 empty-container">
+		</div>
+		<div class="col-1 justify-content-lg-right">
+			<h4 id="logo"><a href="/siteMap">mypmwork.com</a></h4>
+		</div>
+	</div>
+	<div class="row justify-content-lg-center">
+		<div class="col col-lg-auto pt-0" id="returnUser">
+			<h1>{{ heading }}</h1>
+		</div>
+	</div>
+</div>
+<!-- End Header Container-->
+
+<!-- Begin User Info Container -->
+	<div class="container">
+		<div class="row">
+			<div id="userInfo" class="col-5">
+				<div class="row pt-2">
+					<div class="col">
+						<span class="font-weight-bold">Username</span>
+						<span id="username">{{username}}</span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<span class="font-weight-bold">Role</span>
+						<span id="userRoll">{{userrole}}</span>
+					</div>
+				</div>	
+			</div>
+			<div id="summaryTrackingButtons"class="col-4 pt-4 empty-container">
+			</div>
+			<div class="col-1 empty-container">
+			</div>
+			<div class="col-2 pt-4">
+				<button id="createProjectButton" class="float-right"><a href="/createProject">Create Project</a></button>
+			</div>
+		</div>
+	</div>
+<!-- End User Info Container -->
