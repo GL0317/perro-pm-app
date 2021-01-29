@@ -1,0 +1,32 @@
+<!-- Begin Main View Container -->
+<div class="mainView container pt-2 table-responsive">
+    <table class="table border border-dark table-striped">
+        <thead class="thead-dark">
+            <tr class="border border-dark">
+                <th scope="col-3">
+                    Task Name
+                </th>
+                <th scope="col-4">
+                    Task Description
+                </th>
+                <th scope="col">
+                    Due Date
+                </th>
+                <th scope="col">
+                    Assignee
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+                {{#each dbTasks}} 
+                <tr scope="row">
+                    <td class="taskNameField"><a class="task-links" href="/task/{{projectName}}/{{taskName}}">{{taskName}}</a></td>
+                    <td class="taskDescriptionField">{{taskDescription}}</td>
+                    <td class="taskDueDateField">{{taskDueDate}}</td>
+                    <td class="taskAssignee">{{taskAssignee}}</td>
+                </tr>
+                {{/each}}
+        </tbody>
+    </table>
+</div>
+<!--End Main View Container -->

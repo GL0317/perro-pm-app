@@ -8,7 +8,9 @@ const prototypeUser = {
 }
 
 const api = {
-    userProjects: `${apiUrl}/users/${prototypeUser.userId}/projects`
+    userProjects: `${apiUrl}/users/${prototypeUser.userId}/projects`,
+    projectId: null,
+    oneProject: `${apiUrl}/projects/${this.projectId}/tasks`
 }
 
 
@@ -24,6 +26,10 @@ const getProjects = async (url) => {
     return projectData;
 }
 
+const getData = async (url) => {
+    let projectData = await fetchData(url);
+    return projectData;
+}
 /*
 const getAllUsers = async (url) => {
     let usersData = await fetch(url)
@@ -53,16 +59,17 @@ router.get('/', async (req, res) =>{
     res.render('projectList', content)
 })
 
-/*
-router.get('/projects', (req, res) =>{
-    let pageName = 'Project List'
+
+router.get('/:projectId', async (req, res) =>{
+    api.projectId = req.params.projectId
+    let pageName = 'Project Summary'
     const content = {
         title: pageName,
         msg: 'The project list page',
         heading: pageName
     }
-    res.render('projectList', content)
+    content.project = await getData(api.oneProject)
+    res.render('projectSummary', content)
 })
-*/
 
 module.exports = router
